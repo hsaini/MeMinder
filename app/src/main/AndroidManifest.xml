@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Home" />
+        <activity android:name=".Create_Account" />
+        <activity android:name=".Calendar" />
+        <activity android:name=".To_do" />
+        <activity android:name=".Completed"></activity>
     </application>
 
 </manifest>

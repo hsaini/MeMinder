@@ -12,4 +12,16 @@
     <string name="password" />
     <string name="login">Login</string>
     <string name="create_account">Create Account</string>
+    <string name="account" />
+    <string name="first_name_label">First Name</string>
+    <string name="first_name" />
+    <string name="lastName_label">Last Name</string>
+    <string name="last_name" />
+    <string name="email_label">Email</string>
+    <string name="email" />
+    <string name="passwords" />
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm" />
+    <string name="create_account2">Create Account</string>
+    <string name="back">Back</string>
 </resources>

@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 @Dao
-public class User_C_Account_Dao {
+public interface User_C_Account_Dao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void addUser(User_C_Account user_create_account);
 

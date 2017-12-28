@@ -2,17 +2,35 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.harneet.meminder.Logo">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <fragment
+        android:id="@+id/fragment_picture"
+        android:name="com.example.harneet.meminder.Logo_picFragment"
+        android:layout_width="0dp"
+        android:layout_height="241dp"
+        android:layout_marginBottom="263dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout="@layout/fragment_logo_pic" />
+
+    <fragment
+        android:id="@+id/fragments"
+        android:name="com.example.harneet.meminder.Logo_loginFragment"
+        android:layout_width="401dp"
+        android:layout_height="272dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_logo_login" />
 
 </android.support.constraint.ConstraintLayout>

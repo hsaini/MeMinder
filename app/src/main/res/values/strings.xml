@@ -24,4 +24,7 @@
     <string name="confirm" />
     <string name="create_account2">Create Account</string>
     <string name="back">Back</string>
+    <string name="View_To_do">To Do List</string>
+    <string name="View_calendar">Calendar</string>
+    <string name="View_completed">Completed List</string>
 </resources>

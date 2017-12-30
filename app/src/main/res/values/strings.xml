@@ -27,4 +27,10 @@
     <string name="View_To_do">To Do List</string>
     <string name="View_calendar">Calendar</string>
     <string name="View_completed">Completed List</string>
+    <string name="Add">Add</string>
+    <string name="back_home">Back Home</string>
+    <string name="assignment_number">Assignment #</string>
+    <string name="course_Name">Course Name</string>
+    <string name="course_Code">Course Code</string>
+    <string name="due">Due on</string>
 </resources>

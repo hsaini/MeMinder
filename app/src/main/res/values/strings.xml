@@ -33,4 +33,9 @@
     <string name="course_Name">Course Name</string>
     <string name="course_Code">Course Code</string>
     <string name="due">Due on</string>
+
+    <string-array name="completed">
+        <item>Completed</item>
+        <item>Not Completed</item>
+    </string-array>
 </resources>

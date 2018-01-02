@@ -34,7 +34,7 @@ public class Login extends Activity implements OnClickListener {
             database.user_login_dao().addUser(new User_Login(1, "Hsaini7844", "123456"));
             user_login = database.user_login_dao().getAllUser().get(0);
         }
-        
+
         logInButton = (Button)
                 findViewById(R.id.logInButton);
         createAccountButton = (Button)

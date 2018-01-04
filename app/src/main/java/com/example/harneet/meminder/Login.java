@@ -15,8 +15,10 @@ public class Login extends Activity implements OnClickListener {
 
     private Button logInButton;
     private Button createAccountButton;
+    private EditText username;
+    private EditText password;
 
-//    EditText username = (EditText) findViewById(R.id.userNameEditLabel);
+//    EditText username = (EditText) findViewById(R.id.userNameEditText);
 //    EditText password = (EditText) findViewById(R.id.passwordEditText);
 
     private User_Login user_login;
@@ -33,39 +35,42 @@ public class Login extends Activity implements OnClickListener {
         if (user_logins.size() == 0) {
             database.user_login_dao().addUser(new User_Login(1, "Hsaini7844", "123456"));
             user_login = database.user_login_dao().getAllUser().get(0);
+
+            logInButton = (Button)
+                    findViewById(R.id.logInButton);
+            createAccountButton = (Button)
+                    findViewById(R.id.createAccountButton);
+
+            logInButton.setOnClickListener(this);
+            createAccountButton.setOnClickListener(this);
+
+            username = (EditText)
+                    findViewById(R.id.userNameEditText);
+            password = (EditText)
+                    findViewById(R.id.passwordEditText);
+
         }
-
-        logInButton = (Button)
-                findViewById(R.id.logInButton);
-        createAccountButton = (Button)
-                findViewById(R.id.createAccountButton);
-
-        logInButton.setOnClickListener(this);
-        createAccountButton.setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.logInButton) {
-            Intent login = new Intent(Login.this,
-                    Home.class);
-            startActivity(login);
-        } else if (v.getId() == R.id.createAccountButton) {
+            if (username.getText().equals(username)
+                    && password.getText().equals(password)) {
+                Intent login = new Intent(Login.this,
+                        Home.class);
+                startActivity(login);
+            }
+            if (username.getText().toString().equals(" ")
+                    && password.getText().toString().equals(" ")) {
+                Toast.makeText(getApplicationContext(),
+                        "Wrong Credentials", Toast.LENGTH_SHORT).show();
+            }
+        }
+        if (v.getId() == R.id.createAccountButton) {
             Intent create = new Intent(Login.this,
                     Create_Account.class);
             startActivity(create);
         }
     }
-
-//    public void loginValidation() {
-//        if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
-//            //correcct password
-//        }
-//        else {
-//            Toast.makeText(getApplicationContext(),
-//                    "Wrong Credentials",Toast.LENGTH_SHORT).show();
-//        }
-//
-//    }
 }
